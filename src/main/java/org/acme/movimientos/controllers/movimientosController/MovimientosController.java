@@ -39,7 +39,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 
-@Path("/efectivo3")
+@Path("/efectivos")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Slf4j
