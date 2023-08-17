@@ -11,11 +11,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/beneficiarios/{idCuenta}")
+/*@Path("/beneficiarios/{idCuenta}")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class ConsultaBeneficiariosController {
-    private static final Logger LOG = Logger.getLogger(ConsultaBeneficiariosController.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(ConsultaBeneficiariosController.class.getName());
 
 
     @GET
@@ -115,6 +115,6 @@ public class ConsultaBeneficiariosController {
         		+ "  }\n"
         		+ "}")
                 .build();
-    }
+    }*/
 
 }

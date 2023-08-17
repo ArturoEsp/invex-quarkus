@@ -14,11 +14,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/addThirdAccountsDebitCard")
+/*@Path("/addThirdAccountsDebitCard")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class AddByDebitCard {
-    private static final Logger LOG = Logger.getLogger(AddByDebitCard.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(AddByDebitCard.class.getName());
      @POST
     @Path("")
     public Response addThirdAccountsCreditCard(@RequestBody AddThirdAccountsDebitCardReq addThirdAccountsDebitCardReq , @HeaderParam("Authorization") String authorizationHeader) {
@@ -67,6 +67,6 @@ public class AddByDebitCard {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
 
 }

@@ -16,11 +16,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/cepvoucherinquiry")
+/*@Path("/cepvoucherinquiry")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class ConsultaCEP {
-    private static final Logger LOG = Logger.getLogger(ConsultaCEP.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(ConsultaCEP.class.getName());
      @POST
     @Path("")
     public Response createSPEIOrder(@RequestBody CEPVoucherInquiryReqDto cEPVoucherInquiryReqDto , @HeaderParam("Authorization") String authorizationHeader) {
@@ -93,5 +93,5 @@ public class ConsultaCEP {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
 }

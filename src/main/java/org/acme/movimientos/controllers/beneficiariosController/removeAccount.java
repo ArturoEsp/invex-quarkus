@@ -14,11 +14,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/removeThirdAccounts")
+/*@Path("/removeThirdAccounts")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class removeAccount {
-    private static final Logger LOG = Logger.getLogger(removeAccount.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(removeAccount.class.getName());
     @DELETE
     @Path("")
     public Response removeThirdAccounts(@RequestBody RemoveThirdAccountsReq removeThirdAccountsReq , @HeaderParam("Authorization") String authorizationHeader) {
@@ -68,5 +68,5 @@ public class removeAccount {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
 }

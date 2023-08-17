@@ -14,11 +14,11 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/generatetoken")
+/*@Path("/generatetoken")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class TokenController {
-     private static final Logger LOG = Logger.getLogger(TokenController.class.getName());
+     /*private static final Logger LOG = Logger.getLogger(TokenController.class.getName());
 
      @GET
     @Path("")
@@ -38,5 +38,5 @@ public class TokenController {
                         .sign();
         System.out.println(token);
         return token;
-    }
+    }*/
 }

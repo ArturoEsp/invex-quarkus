@@ -17,13 +17,13 @@ import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 import java.util.ArrayList;
 import java.util.List;
 
-@Path("/bankList")
+/*@Path("/bankList")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Slf4j
+@Slf4j*/
 public class ApiBankController {
 
-    @POST
+   /* @POST
     @Path("")
     public Response getBankList(@RequestBody GetRequestDataUser getRequestDataUser){
         if(StringUtils.isBlank(getRequestDataUser.getNetwork())){
@@ -55,5 +55,5 @@ public class ApiBankController {
         GetBankListingRes getBankListingRes = new GetBankListingRes();
         getBankListingRes.setDataBank(databank);
         return Response.ok(getBankListingRes).build();
-    }
+    }*/
 }

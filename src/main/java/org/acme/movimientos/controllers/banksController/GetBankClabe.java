@@ -16,13 +16,13 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/getBankClabe")
+/*@Path("/getBankClabe")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class GetBankClabe {
     private static final Logger LOG = Logger.getLogger(GetBankClabe.class.getName());
 
-    @POST
+    /*@POST
     @Path("")
     public Response getBankporClabe(@RequestBody RequestGetBankClabe bankdto , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
@@ -76,6 +76,6 @@ public class GetBankClabe {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
     
 }

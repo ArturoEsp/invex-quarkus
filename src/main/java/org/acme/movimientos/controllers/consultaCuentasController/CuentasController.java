@@ -12,12 +12,12 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/cuentas")
+/*@Path("/cuentas")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class CuentasController {
 
-     private static final Logger LOG = Logger.getLogger(CuentasController.class.getName());
+     /*private static final Logger LOG = Logger.getLogger(CuentasController.class.getName());
 
     @GET
     @Path("")
@@ -138,5 +138,5 @@ public class CuentasController {
         		+ "  }\n"
         		+ "}")
                 .build();
-    }
+    }*/
 }

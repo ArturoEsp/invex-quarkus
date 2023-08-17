@@ -14,11 +14,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/addThirdAccountsInvex")
+/*@Path("/addThirdAccountsInvex")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class AddByAccountInvex {
-    private static final Logger LOG = Logger.getLogger(AddByAccountInvex.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(AddByAccountInvex.class.getName());
     @POST
     @Path("")
     public Response addThirdAccountsInvex(@RequestBody AddThirdAccountsInvexReq addThirdAccountsInvexReq , @HeaderParam("Authorization") String authorizationHeader) {
@@ -68,5 +68,5 @@ public class AddByAccountInvex {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
 }

@@ -13,12 +13,12 @@ import java.util.logging.Logger;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 
-@Path("/createSPEIOrder")
+/*@Path("/createSPEIOrder")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class OrderSpeiController {
 
-    private static final Logger LOG = Logger.getLogger(OrderSpeiController.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(OrderSpeiController.class.getName());
     
     @Inject
     CuentaService cuentaService;
@@ -89,7 +89,7 @@ public class OrderSpeiController {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
     
     
 }

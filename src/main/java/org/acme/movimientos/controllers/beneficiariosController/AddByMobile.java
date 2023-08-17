@@ -14,11 +14,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/addThirdAccountsMobile")
+/*@Path("/addThirdAccountsMobile")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class AddByMobile {
-    private static final Logger LOG = Logger.getLogger(AddByMobile.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(AddByMobile.class.getName());
     @POST
     @Path("")
     public Response addThirdAccountsMobile(@RequestBody AddThirdAccountsMobileReq addThirdAccountsMobileReq , @HeaderParam("Authorization") String authorizationHeader) {
@@ -68,5 +68,5 @@ public class AddByMobile {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
 }

@@ -12,12 +12,12 @@ import java.util.logging.Logger;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 
-@Path("/transferIntoInvex")
+/*@Path("/transferIntoInvex")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class TranferIntoInvex {
 
-      private static final Logger LOG = Logger.getLogger(TranferIntoInvex.class.getName());
+     /* private static final Logger LOG = Logger.getLogger(TranferIntoInvex.class.getName());
 
     @POST
     @Path("")
@@ -111,6 +111,6 @@ public class TranferIntoInvex {
         )return false;
         return true;
     }
-        
+        */
 
 }
