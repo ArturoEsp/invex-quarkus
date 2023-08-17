@@ -1,3 +1,0 @@
-La generacion del jar se realizo por medio del comando: mvnw package -Dquarkus.package.type=uber-jar
-La versiond de java usada es: java 11
-La verison de quarkus usada es: 3.0.1.Final
