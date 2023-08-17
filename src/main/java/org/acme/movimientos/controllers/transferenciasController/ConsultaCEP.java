@@ -16,13 +16,13 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/cepvoucherinquiry")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class ConsultaCEP {
     private static final Logger LOG = Logger.getLogger(ConsultaCEP.class.getName());
      @POST
-    @Path("/cepvoucherinquiry")
+    @Path("")
     public Response createSPEIOrder(@RequestBody CEPVoucherInquiryReqDto cEPVoucherInquiryReqDto , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         InfoDto infodto = new InfoDto();

@@ -14,14 +14,14 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/efectivo")
+@Path("/efectivo/generatetoken")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class TokenController {
      private static final Logger LOG = Logger.getLogger(TokenController.class.getName());
 
      @GET
-    @Path("/generatetoken")
+    @Path("")
     public String getToken() {
     	// Tiempo de expiración: 20 minutos desde ahora (en milisegundos)
     	long expirationTimeInMillis = System.currentTimeMillis() + (20 * 60 * 1000);

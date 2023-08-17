@@ -12,7 +12,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/cuentas")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class CuentasController {
@@ -20,7 +20,7 @@ public class CuentasController {
      private static final Logger LOG = Logger.getLogger(CuentasController.class.getName());
 
     @GET
-    @Path("/cuentas")
+    @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBeneficiarios(@HeaderParam("Authorization") String authorizationHeader) {
         // Verificar si el encabezado de autorización es nulo o está vacío

@@ -16,14 +16,14 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/getBankClabe")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class GetBankClabe {
     private static final Logger LOG = Logger.getLogger(GetBankClabe.class.getName());
 
     @POST
-    @Path("/getBankClabe")
+    @Path("")
     public Response getBankporClabe(@RequestBody RequestGetBankClabe bankdto , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         InfoDto infodto = new InfoDto();

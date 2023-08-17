@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 
-@Path("/efectivo")
+@Path("/efectivo/movimientos/{cuenta}/{fecha}/{cep}/{operationType}")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class MovimientosController {
@@ -29,7 +29,7 @@ public class MovimientosController {
 
     
     @GET
-    @Path("/movimientos/{cuenta}/{fecha}/{cep}/{operationType}")
+    @Path("")
     public Response getMovimientosV2(@PathParam("cuenta") @NotNull String cuenta, @PathParam("fecha") @NotNull String fecha,@PathParam("cep") @NotNull String cep,@PathParam("operationType") @NotNull String operationType, @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         try {

@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 
-@Path("/efectivo")
+@Path("/efectivo/transferIntoInvex")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class TranferIntoInvex {
@@ -20,7 +20,7 @@ public class TranferIntoInvex {
       private static final Logger LOG = Logger.getLogger(TranferIntoInvex.class.getName());
 
     @POST
-    @Path("/transferIntoInvex")
+    @Path("")
     public Response transferenciaEntreCuentasInvex(@RequestBody TraspasosInvReq traspasosInvReq, @HeaderParam("Authorization") String authorizationHeader) {
         InfoDto infodto = new InfoDto();
         LOG.info("Proceso endpoint mockeado Transferencia entre cuentas");

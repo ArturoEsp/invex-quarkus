@@ -14,14 +14,14 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/addThirdAccountsCLABE")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class AddByClabe {
     private static final Logger LOG = Logger.getLogger(AddByClabe.class.getName());
 
     @POST
-    @Path("/addThirdAccountsCLABE")
+    @Path("")
     public Response addThirdAccountsCLABE(@RequestBody AddThirdAccountsCLABEReq addThirdAccountsCLABEReq , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         try {

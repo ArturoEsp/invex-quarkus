@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 
-@Path("/efectivo")
+@Path("/efectivo/createSPEIOrder")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class OrderSpeiController {
@@ -24,7 +24,7 @@ public class OrderSpeiController {
     CuentaService cuentaService;
 
     @POST
-    @Path("/createSPEIOrder")
+    @Path("")
     public Response addThirdAccountsCLABE(@RequestBody CreateSPEIOrderReqDto createSPEIOrderReqDto, @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         InfoDto infodto = new InfoDto();

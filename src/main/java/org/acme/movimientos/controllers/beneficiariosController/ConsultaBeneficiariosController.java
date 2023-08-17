@@ -11,7 +11,7 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/beneficiarios/{idCuenta}")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class ConsultaBeneficiariosController {
@@ -19,7 +19,7 @@ public class ConsultaBeneficiariosController {
 
 
     @GET
-    @Path("/beneficiarios/{idCuenta}")
+    @Path("")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBeneficiarios(@PathParam("idCuenta") String idCuenta, @HeaderParam("Authorization") String authorizationHeader) {
         // Verificar si el encabezado de autorización es nulo o está vacío

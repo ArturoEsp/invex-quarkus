@@ -14,13 +14,13 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/addThirdAccountsInvex")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class AddByAccountInvex {
     private static final Logger LOG = Logger.getLogger(AddByAccountInvex.class.getName());
     @POST
-    @Path("/addThirdAccountsInvex")
+    @Path("")
     public Response addThirdAccountsInvex(@RequestBody AddThirdAccountsInvexReq addThirdAccountsInvexReq , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         try {

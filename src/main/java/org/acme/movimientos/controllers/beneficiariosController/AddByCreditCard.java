@@ -14,13 +14,13 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/efectivo/addThirdAccountsCreditCard")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class AddByCreditCard {
     private static final Logger LOG = Logger.getLogger(AddByCreditCard.class.getName());
     @POST
-    @Path("/addThirdAccountsCreditCard")
+    @Path("")
     public Response addThirdAccountsCreditCard(@RequestBody AddThirdAccountsCreditCardReq addThirdAccountsCreditCardReq , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         try {
