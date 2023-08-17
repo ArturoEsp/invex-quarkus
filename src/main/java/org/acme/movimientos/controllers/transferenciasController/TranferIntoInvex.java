@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
 
-@Path("/efectivo/transferIntoInvex")
+@Path("/transferIntoInvex")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class TranferIntoInvex {

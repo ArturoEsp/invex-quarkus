@@ -14,13 +14,13 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/efectivo")
+@Path("/removeThirdAccounts")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class removeAccount {
     private static final Logger LOG = Logger.getLogger(removeAccount.class.getName());
     @DELETE
-    @Path("/removeThirdAccounts")
+    @Path("")
     public Response removeThirdAccounts(@RequestBody RemoveThirdAccountsReq removeThirdAccountsReq , @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         try {

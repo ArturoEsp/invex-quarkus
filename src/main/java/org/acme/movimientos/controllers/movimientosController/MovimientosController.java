@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 
-@Path("/efectivo/movimientos/{cuenta}/{fecha}/{cep}/{operationType}")
+@Path("/movimientos/{cuenta}/{fecha}/{cep}/{operationType}")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 public class MovimientosController {
