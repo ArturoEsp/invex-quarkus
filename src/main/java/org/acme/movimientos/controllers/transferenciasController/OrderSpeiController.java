@@ -1,100 +1,30 @@
-package org.acme.movimientos.controllers.orderspei;
+package org.acme.movimientos.controllers.transferenciasController;
 
 import jakarta.inject.Inject;
-import jakarta.validation.constraints.NotNull;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.*;
 
-import org.acme.movimientos.dtos.AddThirdAccountsCLABEReq;
-import org.acme.movimientos.dtos.AddThirdAccountsCreditCardReq;
-import org.acme.movimientos.dtos.AddThirdAccountsDebitCardReq;
-import org.acme.movimientos.dtos.AddThirdAccountsInvexReq;
-import org.acme.movimientos.dtos.AddThirdAccountsMobileReq;
-import org.acme.movimientos.dtos.CEPVoucherInquiryReqDto;
 import org.acme.movimientos.dtos.InfoDto;
-import org.acme.movimientos.dtos.MovimientosDto;
-import org.acme.movimientos.dtos.RemoveThirdAccountsReq;
 import org.acme.movimientos.dtos.orderspei.CreateSPEIOrderReqDto;
 import org.acme.movimientos.services.CuentaService;
-import org.acme.movimientos.services.CuentaServiceImpl;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-
+import org.acme.movimientos.utilities.TokenUtility;
 import java.util.logging.Logger;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
-import java.util.HashSet;
-
-import org.eclipse.microprofile.jwt.Claims;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
-import io.smallrye.jwt.build.Jwt;
 
-@Path("/efectivo2")
+/*@Path("/createSPEIOrder")
 @Produces(MediaType.APPLICATION_JSON)
-@Consumes(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)*/
 public class OrderSpeiController {
 
-    private static final Logger LOG = Logger.getLogger(OrderSpeiController.class.getName());
+    /*private static final Logger LOG = Logger.getLogger(OrderSpeiController.class.getName());
     
     @Inject
     CuentaService cuentaService;
 
-
-
-
-    // Verificar el Bearer Token y obtener el "cui"
-    private String verifyAndGetCui(String authorizationHeader) {
-        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            String token = authorizationHeader.substring("Bearer ".length());
-
-            try {
-                DecodedJWT decodedToken = JWT.decode(token);
-                String cui = decodedToken.getClaim("cui").asString();
-
-                return cui;
-            } catch (Exception e) {
-                // Manejar el error según tus necesidades
-                throw new RuntimeException("Error al decodificar el JWT", e);
-            }
-        }
-
-        throw new WebApplicationException("Bearer token invalido", Response.Status.UNAUTHORIZED);
-    }
-
-    // Verificar el Bearer Token y obtener el "cui"
-    private String verifyAndGetFolio(String authorizationHeader) {
-        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            String token = authorizationHeader.substring("Bearer ".length());
-
-            try {
-                DecodedJWT decodedToken = JWT.decode(token);
-                String folio = decodedToken.getClaim("folio").asString();
-
-                return folio;
-            } catch (Exception e) {
-                // Manejar el error según tus necesidades
-                throw new RuntimeException("Error al decodificar el JWT", e);
-            }
-        }
-
-        throw new WebApplicationException("Bearer token invalido", Response.Status.UNAUTHORIZED);
-    }
-
-
-
     @POST
-    @Path("/createSPEIOrder")
+    @Path("")
     public Response addThirdAccountsCLABE(@RequestBody CreateSPEIOrderReqDto createSPEIOrderReqDto, @HeaderParam("Authorization") String authorizationHeader) {
         String response=null;
         InfoDto infodto = new InfoDto();
@@ -133,10 +63,10 @@ public class OrderSpeiController {
             }
 
             // Verificar y obtener el "cui" del JWT
-            String cui = verifyAndGetCui(authorizationHeader);
+            String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
             LOG.info("CUI: "+cui);
             // Verificar y obtener el "cui" del JWT
-            String folio = verifyAndGetFolio(authorizationHeader);
+            String folio = "1234";//TokenUtility.verifyAndGetFolio(authorizationHeader);
             LOG.info("Folio: "+folio);
       
             return Response.ok("{\n"
@@ -144,6 +74,7 @@ public class OrderSpeiController {
             		+ "    \"httpStatus\": 200,\n"
             		+ "    \"timestamp\": \"2023-08-04T17:37:06.486428700\",\n"
             		+ "    \"message\": \"Microservice working fine\",\n"
+            		+ "  \"token\": \"" + authorizationHeader + "\"," 
             		+ "    \"data\": {\n"
             		+ "        \"createSPEIOrderRes\": {\n"
             		+ "            \"contractReferenceNumber\": \"001BUSS232000248\",\n"
@@ -158,7 +89,7 @@ public class OrderSpeiController {
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).entity("Error al consultar la información del cliente: "+e.getMessage()).build();
         }
-    }
+    }*/
     
     
 }
