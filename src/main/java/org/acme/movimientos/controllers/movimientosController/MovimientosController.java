@@ -51,25 +51,18 @@ public class MovimientosController {
     CuentaService cuentaService;
 
 
-    /*@GET
+    @GET
     @Path("/generatetoken")
     public String getToken() {
     	// Tiempo de expiración: 20 minutos desde ahora (en milisegundos)
     	long expirationTimeInMillis = System.currentTimeMillis() + (20 * 60 * 1000);
 
 
-        String token =
-                Jwt.issuer("https://example.com/issuer")
-                        .upn("jdoe@quarkus.io")
-                        .groups(new HashSet<>(Arrays.asList("User", "Admin")))
-                        .claim(Claims.birthdate.name(), "2001-07-13")
-                        .claim("cui", "123456")
-                        .claim("folio", "1234")
-                        .expiresAt(expirationTimeInMillis) // Establecer la fecha de expiración
-                        .sign();
+        String token ="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tL2lzc3VlciIsInVwbiI6Impkb2VAcXVhcmt1cy5pbyIsImdyb3VwcyI6WyJVc2VyIiwiQWRtaW4iXSwiYmlydGhkYXRlIjoiMjAwMS0wNy0xMyIsImN1aSI6IjEyMzQ1NiIsImZvbGlvIjoiMTIzNCIsImV4cCI6MTY5MTA4NjE0OTI1NSwiaWF0IjoxNjkxMDg0OTQ5LCJqdGkiOiIzODEyZTQyYi04NjAzLTRiMDktYWY4YS1hZGI5MWY2NzA0MjkifQ.ThcYjeXONKZbLsLQUFMig6irnqDWZgFQic9j8Z3RJPFXXh4A6pTmGsT-DrR1vYsKa-blHY8QOACF8JovGNsAHLN6BwO8nMxHO25ySi1wO0NqVSQNPeqbLgJwslHW9fFTomTbZtJq5bdypIifI208hWisxYsy8LF-IgQLXj015AbcmWwuCxhTBfND39BiTIZntuCyEDkdZxJF-oqsxCFvkJsiLzBhnoDq6cizM0sulrytDRntIfO2-Dx0DHKruBpaEO358YUxrRrS1JHZnzLgfgqHFSSn7seaikdpLbyji26bqgtdFCmTIk1vMbIjaglybRaAHnnngUzXjDdaoUBqsg";
+                
         System.out.println(token);
         return token;
-    }*/
+    }
     
     @GET
     @Path("/movimientos/{cuenta}/{fecha}/{cep}/{operationType}")
