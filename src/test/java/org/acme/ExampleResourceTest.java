@@ -12,7 +12,7 @@ public class ExampleResourceTest {
     @Test
     public void testHelloEndpoint() {
         given()
-                .when().get("/efectivo/generatetoken")
+                .when().get("/efectivos/generatetoken")
                 .then()
                 .statusCode(200)
                 .body(notNullValue());
