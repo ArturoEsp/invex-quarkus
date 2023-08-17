@@ -25,10 +25,10 @@ import org.acme.movimientos.dtos.traspasoEntreCuentasInvex.TraspasosInvReq;
 import org.acme.movimientos.services.CuentaService;
 import org.acme.movimientos.utilities.TokenUtility;
 import org.apache.commons.lang3.StringUtils;
-import org.eclipse.microprofile.jwt.Claims;
+//import org.eclipse.microprofile.jwt.Claims;
 import org.eclipse.microprofile.openapi.annotations.parameters.RequestBody;
 
-import io.smallrye.jwt.build.Jwt;
+//import io.smallrye.jwt.build.Jwt;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +51,7 @@ public class MovimientosController {
     CuentaService cuentaService;
 
 
-    @GET
+    /*@GET
     @Path("/generatetoken")
     public String getToken() {
     	// Tiempo de expiración: 20 minutos desde ahora (en milisegundos)
@@ -69,7 +69,7 @@ public class MovimientosController {
                         .sign();
         System.out.println(token);
         return token;
-    }
+    }*/
     
     @GET
     @Path("/movimientos/{cuenta}/{fecha}/{cep}/{operationType}")
@@ -86,12 +86,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autrizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -759,7 +759,7 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 infodto.setHttpStatus(400);
                 infodto.setMessage("e requiere el encabezado de autorizacion");
@@ -767,7 +767,7 @@ public class MovimientosController {
                 return Response.status(Response.Status.BAD_REQUEST).entity(infodto).build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -812,12 +812,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -863,12 +863,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -914,12 +914,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -965,12 +965,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -1016,12 +1016,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -1056,12 +1056,12 @@ public class MovimientosController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBeneficiarios(@PathParam("idCuenta") String idCuenta, @HeaderParam("Authorization") String authorizationHeader) {
         // Verificar si el encabezado de autorización es nulo o está vacío
-        if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+    	/*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
             LOG.severe("Se requiere el encabezado de autorización");
             return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
         }else{
             LOG.info("El encabezado de autrizacion es: "+authorizationHeader);
-        }
+        }*/
 
         try {
             LOG.info("ID Cuenta recibido :: " + Integer.parseInt(idCuenta));
@@ -1167,12 +1167,12 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorización");
                 return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -1209,12 +1209,12 @@ public class MovimientosController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getBeneficiarios(@HeaderParam("Authorization") String authorizationHeader) {
         // Verificar si el encabezado de autorización es nulo o está vacío
-        if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+        /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
             LOG.severe("Se requiere el encabezado de autorización");
             return Response.status(Response.Status.BAD_REQUEST).entity("Se requiere el encabezado de autorización").build();
         }else{
             LOG.info("El encabezado de autrizacion es: "+authorizationHeader);
-        }
+        }*/
 
         // Verificar y obtener el "cui" del JWT
         String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -1357,7 +1357,7 @@ public class MovimientosController {
             }
 
         	// Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorizacion");
                 LOG.severe("Error al ejecutar el ws ThirdAccountCLABE,Se requiere el encabezado de autorizacion");
                 infodto.setHttpStatus(400);
@@ -1367,7 +1367,7 @@ public class MovimientosController {
                 return Response.status(Response.Status.BAD_REQUEST).entity(infodto).build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -1428,7 +1428,7 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorizacion");
                 LOG.severe("Error al ejecutar el ws ThirdAccountCLABE,Se requiere el encabezado de autorizacion");
                 infodto.setHttpStatus(400);
@@ -1438,7 +1438,7 @@ public class MovimientosController {
                 return Response.status(Response.Status.BAD_REQUEST).entity(infodto).build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);
@@ -1487,7 +1487,7 @@ public class MovimientosController {
             }
 
             // Verificar si el encabezado de autorización es nulo o está vacío
-            if (authorizationHeader == null || authorizationHeader.isEmpty()) {
+            /*if (authorizationHeader == null || authorizationHeader.isEmpty()) {
                 LOG.severe("Se requiere el encabezado de autorizacion");
                 LOG.severe("Error al ejecutar el ws ThirdAccountCLABE,Se requiere el encabezado de autorizacion");
                 infodto.setHttpStatus(400);
@@ -1498,7 +1498,7 @@ public class MovimientosController {
                 return Response.status(Response.Status.BAD_REQUEST).entity(infodto).build();
             }else{
                 LOG.info("El encabezado de autorizacion es: "+authorizationHeader);
-            }
+            }*/
 
             // Verificar y obtener el "cui" del JWT
             String cui = "123456";//TokenUtility.verifyAndGetCui(authorizationHeader);

@@ -4,9 +4,9 @@ import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.HashSet;
 
-import org.eclipse.microprofile.jwt.Claims;
+//import org.eclipse.microprofile.jwt.Claims;
 
-import io.smallrye.jwt.build.Jwt;
+//import io.smallrye.jwt.build.Jwt;
 
 public class GenerateToken {
     /**
@@ -15,7 +15,7 @@ public class GenerateToken {
     public static void main(String[] args) {
         Instant expirationTime = Instant.now().plus(3, ChronoUnit.HOURS);
 
-        String token =
+        /*String token =
                 Jwt.issuer("https://example.com/issuer")
                         .upn("jdoe@quarkus.io")
                         .groups(new HashSet<>(Arrays.asList("User", "Admin")))
@@ -23,6 +23,6 @@ public class GenerateToken {
                         .claim("cui", "123456")
                         .claim("folio", "0")
                         .sign();
-        System.out.println(token);
+        System.out.println(token);*/
     }
 }

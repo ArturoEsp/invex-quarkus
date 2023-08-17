@@ -5,9 +5,7 @@ import java.util.HashSet;
 import java.util.logging.Logger;
 
 import org.acme.movimientos.controllers.movimientosController.MovimientosController;
-import org.eclipse.microprofile.jwt.Claims;
 
-import io.smallrye.jwt.build.Jwt;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

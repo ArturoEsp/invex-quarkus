@@ -6,13 +6,13 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.smallrye.jwt.build.Jwt;
+//import io.smallrye.jwt.build.Jwt;
 import jakarta.enterprise.context.ApplicationScoped;
 
 //import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.acme.movimientos.utilities.Constants;
-import org.eclipse.microprofile.jwt.Claims;
+//import org.eclipse.microprofile.jwt.Claims;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -229,7 +229,7 @@ public class CuentaServiceImpl implements CuentaService{
         return response;
     }
 
-    public String obtenerConsultacuentas() throws IOException {
+   /* public String obtenerConsultacuentas() throws IOException {
         String response = null;
 
 
@@ -273,6 +273,6 @@ public class CuentaServiceImpl implements CuentaService{
         }
 
 
-    }
+    }*/
 
 }

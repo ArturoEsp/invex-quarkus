@@ -11,5 +11,5 @@ public interface CuentaService {
 	public String parsearNumeroCuenta(String respuesta, String cuenta);
 	public String obtenerMovimientosDesdeEndpoint(String numerocuenta, String fecha) throws IOException;
 	public String obtenerConsultacuentasporcuiEndpoint(String cui, String folio) throws IOException;
-	public String obtenerConsultacuentas() throws IOException ;
+	//public String obtenerConsultacuentas() throws IOException ;
 }
